@@ -10,6 +10,7 @@ $(function() {
           $('#badges').append('<div class="course">' +
             '<h3>' + response.courses.completed[c].title + '</h3>' +
               '<img src="' + response.courses.completed[c].badge + '"/>' +
+              '<a class="btn btn-primary" target="_blank" href="' + response.courses.completed[c].url + '">See Course</a>' +
             '</div>');
         }
       } catch(e) {
