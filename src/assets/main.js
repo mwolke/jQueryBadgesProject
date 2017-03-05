@@ -7,7 +7,10 @@ $(function() {
       console.log(response.courses.completed);
       try {
         for (let c = 0; c < $(response.courses.completed).length; c++) {
-          $('#badges').append('<div class="course"><h3>' + response.courses.completed[c].title + '</h3></div>');
+          $('#badges').append('<div class="course">' +
+            '<h3>' + response.courses.completed[c].title + '</h3>' +
+              '<img src="' + response.courses.completed[c].badge + '"/>' +
+            '</div>');
         }
       } catch(e) {
         console.log(e)
